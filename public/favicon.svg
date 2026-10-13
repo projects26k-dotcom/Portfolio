@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#ffd04a" stroke="#26314a" stroke-width="4"/>
+  <text x="32" y="42" font-family="'Fredoka', 'Comic Sans MS', sans-serif" font-size="28" font-weight="bold" fill="#26314a" text-anchor="middle">
+    P<tspan fill="#e85045">B</tspan><tspan fill="#3d9d76">.</tspan>
+  </text>
+</svg>
