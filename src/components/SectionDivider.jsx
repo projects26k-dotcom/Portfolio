@@ -1,0 +1,2 @@
+const SectionDivider = () => <div className="relative z-10 mx-auto flex h-8 max-w-6xl items-center justify-center overflow-hidden" aria-hidden="true"><svg viewBox="0 0 500 44" className="h-full w-full max-w-lg"><path d="M4 22c28-30 52 29 82 0s56 29 85 0 55 28 84 0 56-28 84 0 56 28 83 0 49 26 74 0" fill="none" stroke="#e85045" strokeWidth="4" strokeLinecap="round" strokeDasharray="7 8" /><circle cx="250" cy="22" r="7" fill="#ffd04a" stroke="#26314a" strokeWidth="3" /></svg></div>;
+export default SectionDivider;

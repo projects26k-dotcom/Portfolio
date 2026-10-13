@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-ink antialiased overflow-x-hidden;
+    background-color: #fff9ed;
+    background-image: radial-gradient(#edc991 0.75px, transparent 0.75px);
+    background-size: 12px 12px;
+  }
+
+  ::selection { background: #ffd04a; color: #26314a; }
+  h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
+  p, input, textarea { font-family: 'Nunito', sans-serif; }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(255, 249, 237, .84);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(38, 49, 74, .12);
+  box-shadow: 0 5px 0 rgba(38, 49, 74, .08);
+}
+.glass-panel {
+  background: rgba(255, 255, 255, .78);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(38, 49, 74, .12);
+  box-shadow: 5px 6px 0 rgba(38, 49, 74, .12);
+}
+
+/* The old dark utility classes are recoloured here so every existing label reads on paper. */
+.text-white, .text-white\/70, .text-white\/60, .text-white\/50, .text-white\/30 { color: #26314a !important; }
+.text-white\/70 { opacity: .78; }
+.text-white\/60, .text-white\/50 { opacity: .64; }
+.text-white\/30 { opacity: .5; }
+.bg-white\/5 { background-color: rgba(255, 255, 255, .7) !important; }
+.bg-white\/10 { background-color: rgba(255, 255, 255, .9) !important; }
+.border-white\/5, .border-white\/10 { border-color: rgba(38, 49, 74, .14) !important; }
+
+.crayon-title {
+  color: #26314a;
+  text-shadow: 2px 2px 0 #ffd04a, 4px 4px 0 rgba(38, 49, 74, .08);
+  letter-spacing: -.055em;
+}
+.crayon-line { background: repeating-linear-gradient(90deg, #ef826e 0 15px, #ffd04a 15px 25px, #76c7a5 25px 40px, #8aa5f2 40px 54px) !important; height: 3px !important; border-radius: 999px; }
+.paper-card { border-radius: 22px 18px 24px 16px; }
+.paper-card:nth-child(even) { border-radius: 16px 24px 18px 22px; }
+.crayon-progress { background: repeating-linear-gradient(90deg, #e85045 0 32px, #ffd04a 32px 61px, #3d9d76 61px 90px, #4a78c7 90px 120px); box-shadow: 0 2px 6px rgba(38,49,74,.18); }
+.featured-project { background: linear-gradient(120deg, rgba(255,240,189,.95), rgba(255,255,255,.82)); border: 3px solid #26314a; border-radius: 28px 18px 30px 22px; box-shadow: 8px 9px 0 rgba(38,49,74,.15); }
+.availability-note { background: #ffd04a; border: 2px solid #26314a; border-radius: 9px 13px 9px 12px; box-shadow: 4px 4px 0 #26314a; color: #26314a; }
+.toolbox-tray { border: 3px solid #26314a; border-radius: 22px 22px 30px 30px; background: #c58451; box-shadow: inset 0 6px 0 rgba(255,255,255,.18), 7px 8px 0 rgba(38,49,74,.14); }
+.tool-crayon { min-height: 156px; border: 2px solid #26314a; border-radius: 16px 13px 18px 14px; background: #fff9ed; padding: 18px; box-shadow: 3px 4px 0 rgba(38,49,74,.18); transition: transform .2s ease; }
+.back-top { position: fixed; right: 22px; bottom: 23px; z-index: 55; display: flex; flex-direction: column; align-items: center; width: 52px; height: 67px; padding: 5px; border: 2px solid #26314a; border-radius: 15px 15px 10px 10px; background: #e85045; color: #fff9ed; font-size: 26px; font-weight: 800; box-shadow: 3px 4px 0 #26314a; cursor: pointer; }
+.back-top span { font-size: 10px; line-height: 1; }
+.loading-screen { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #fff9ed; background-image: radial-gradient(#edc991 .75px, transparent .75px); background-size: 12px 12px; color: #26314a; }
+.loading-pencil { margin-bottom: 8px; color: #e85045; font-size: 62px; line-height: 1; transform: rotate(-8deg); }
+.loading-name { margin: 0; font-family: 'Fredoka', sans-serif; font-size: clamp(42px, 9vw, 74px); font-weight: 700; letter-spacing: -.08em; text-shadow: 3px 3px 0 #ffd04a; }
+.loading-name span { color: #e85045; }
+.loading-name i { color: #3d9d76; font-style: normal; }
+.loading-copy { margin: 15px 0 12px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.loading-track { width: min(260px, 68vw); height: 12px; overflow: hidden; border: 2px solid #26314a; border-radius: 999px; background: #fff; box-shadow: 3px 3px 0 rgba(38,49,74,.16); }
+.loading-fill { height: 100%; border-radius: inherit; background: repeating-linear-gradient(90deg, #e85045 0 30px, #ffd04a 30px 52px, #3d9d76 52px 73px, #4a78c7 73px 95px); }
+.mobile-note-nav { position: absolute; top: calc(100% + 10px); right: 18px; left: 18px; display: grid; gap: 3px; padding: 18px; border: 2px solid #26314a; border-radius: 10px 16px 11px 14px; background: #ffd04a; box-shadow: 5px 6px 0 #26314a; }
+.mobile-note-nav a { padding: 9px; border-bottom: 1px dashed rgba(38,49,74,.25); color: #26314a; font-family: 'Fredoka', sans-serif; font-size: 18px; font-weight: 600; }
+.sticky-form { background: #fff0a8; border: 2px solid rgba(38,49,74,.25); border-radius: 8px 12px 9px 11px; box-shadow: 9px 10px 0 rgba(38,49,74,.16), inset 0 0 24px rgba(255,255,255,.38); transform: rotate(.45deg); }
+.sticky-form::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .25; background: repeating-linear-gradient(0deg, transparent 0 33px, rgba(38,49,74,.12) 34px, transparent 35px); border-radius: inherit; }
+.sticky-form > *:not(.push-pin) { position: relative; z-index: 1; }
+.push-pin { position: absolute; z-index: 3; top: -17px; left: 50%; width: 30px; height: 30px; transform: translateX(-50%); border: 3px solid #26314a; border-radius: 50%; background: #e85045; box-shadow: 2px 4px 0 rgba(38,49,74,.24); }
+.push-pin::before { content: ''; position: absolute; width: 11px; height: 15px; left: 7px; top: 19px; background: #b63832; clip-path: polygon(35% 0, 65% 0, 100% 100%, 0 100%); }
+.push-pin span { position: absolute; left: 7px; top: 5px; width: 8px; height: 8px; border-radius: 50%; background: #ffb4a8; }
+
+@media (pointer: coarse) {
+  .custom-cursor { display: none; }
+}
